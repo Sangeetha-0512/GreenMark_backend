@@ -33,8 +33,8 @@
 // routes/profile.js
 const express = require("express");
 const router = express.Router();
-const User = require("../model/userSchema"); // your user model
-const authMiddleware = require("../middleware/auth"); // if using JWT
+const User = require("./model/userSchema"); // your user model
+const authMiddleware = require("../routes/middleware/auth"); // if using JWT
 
 // GET /api/profile
 router.get("/", authMiddleware, async (req, res) => {
